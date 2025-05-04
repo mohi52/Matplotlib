@@ -1,19 +1,12 @@
 import matplotlib.pyplot as plt 
-import random
+from random import randint
 
-len = 20 #количество столбов
-x = []
-y = []
+length = 20 # количество столбов
+x = [i+1 for i in range(length)]
+y = [randint(10, 50) for i in range(length)]
 
-
-for i in range(len):
-    y.append(random.randint(10,50)) #длины столбов
-
-for i in range(len):
-    x.append(i+1)
-
-plt.bar(x,y, color = "green",width = 0.9)
-plt.title('Случайная столбчатая диаграмма')
-plt.xlabel('Категории')
-plt.ylabel('Значения')
+plt.bar(x, y, color="green", width=0.9)
+plt.title("Случайная столбчатая диаграмма")
+plt.xlabel("Категории")
+plt.ylabel("Значения")
 plt.show()
